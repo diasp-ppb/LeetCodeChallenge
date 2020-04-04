@@ -1,6 +1,9 @@
 object Solution {
   def singleNumber(nums: Array[Int]): Int = {
-    nums.foldLeft(0)(_ ^ _)
+    var res: Int = 0
+    for( num <- nums )
+      res^=num
+    res
   }
 }
 
